@@ -105,7 +105,7 @@ var Q_DATA= [
 
     {
         Questions: ["xD", ":P", ":D", ":V", ":O", "WOW", "GOOD", "NICE","Okay","OK"],
-        Answers: ["You laugh so hard , Nice keep it up", "Nice to see you laugh .", "Your Laugh is good", "Look , i made you laugh .", "I feel happy to know that i am the reason to laugh, keep laughing and be happy..!"],
+        Answers: ['😊','😘','😎','😍','☺️','🙂','😉','👍🏻'],
         action: (elements) => {
             const { rp } = elements ? elements : {}
             if (rp) {
