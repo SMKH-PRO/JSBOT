@@ -3,19 +3,19 @@ JSBOT - A chatbot made with pure javascript, html &amp; css.
 
 SOME COMMANDS:- 
 
-CHANGE BG COLOR
+1. CHANGE BG COLOR
 
-CHANGE BG GIF.
+2. CHANGE BG GIF.
 
-CHANGE BG IMG.
+3. CHANGE BG IMG.
 
-WHAT IS MY NAME.
+4. WHAT IS MY NAME.
 
-DELETE MY NAME.
+5. DELETE MY NAME.
 
-Press arrow up key to get previous message back in input.
+6. Press arrow up key to get previous message back in input.
 
-Add Custom Question/Answer and they will be available to everyone.
+7. Add Custom Question/Answer and they will be available to everyone.
 
 
 HOW TO ADD MORE QUESTIONS?
