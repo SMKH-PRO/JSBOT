@@ -18,3 +18,5 @@ Questions added through UI form will be stored gloablly means they will be store
 enyone from anywhere visits the site and ask the question that you added will get the answer you wrote!. 
 
 Thats All !!!!!!!
+
+if you have any question reqarding this or my other projects, i have started a new forum where you can any question and i will answer==> https://kashanhaider.com/forums/
