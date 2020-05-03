@@ -104,7 +104,7 @@ var Q_DATA= [
 
 
     {
-        Questions: ["xD", ":P", ":D", ":V", ":O", "WOW", "GOOD", "NICE","Okay","OK"],
+        Questions: ["xD", ":P", ":D", ":V", ":O", "WOW", "GOOD", "NICE","Okay","OK","got it"],
         Answers: ['😊','😘','😎','😍','☺️','🙂','😉','👍🏻'],
         action: (elements) => {
             const { rp } = elements ? elements : {}
