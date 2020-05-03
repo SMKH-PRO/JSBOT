@@ -27,3 +27,9 @@ enyone from anywhere visits the site and ask the question that you added will ge
 Thats All !!!!!!!
 
 if you have any question reqarding this or my other projects, i have started a new forum where you can any question and i will answer==> https://kashanhaider.com/forums/
+
+
+
+NOTICE:-
+This project is practice based project for beginners altough i grant you all the permissions to use it anywhere you want but i shall not be responsible for any bugs,exploits or even hardware loss.
+
