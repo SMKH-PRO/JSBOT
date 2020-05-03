@@ -7,7 +7,7 @@ var filesToCache  = [
   '',
   'index.html',
   'js/Data_Initialize.js',
-  'js/fbinit.js',
+  'js/fbInit.js',
   'js/js.js',
   'js/modal.js',
   'css/css.css',
