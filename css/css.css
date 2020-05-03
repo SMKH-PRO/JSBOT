@@ -1,0 +1,191 @@
+@import url("./modal.css");
+
+button#AddNewQuest {
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    outline-width: 0px;
+    background: white;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+}
+#AddNewQuest:active{
+    color: white;
+    background: black;
+    border: 1px solid wheat;
+
+}
+#username{
+	
+	background-color: #36989F;
+	border-radius: 10px;
+	height: 25px;
+	padding: 0.5px;
+	padding-left:10px;
+	outline-width: 0px;
+	border: 0px;
+	color:white;
+	font-weight: 500;
+}
+#username::-webkit-input-placeholder{
+	
+color: White;
+font-weight: 600;
+}
+
+@font-face {
+    font-family: amaranth;
+    src: url(Amaranth.ttf);
+}
+
+
+  #robop{font-size:14px; color:white; text-shadow:0px 0px 3px  black; margin:10px;}
+  #roboimg{ width:50px; border-radius: 50%; box-shadow: 0px 0px 5px black; margin:5px}
+  #robodiv{animation: fadeup 800ms ease;margin-top: 50px;}
+  #robospan{
+	  
+	  display: inline-block; text-align: center; border:0.5px solid silver; margin:5px; box-shadow:0px 0px 5px black; border-radius:5px; background-color: #0084ff; min-width: 80px; max-width: 300px; overflow-wrap: break-word;  }
+  
+  #robodiv2{ width: 0px; height:0px; display: inline-block; border-top:10px solid transparent; border-bottom: 10px solid transparent; border-right: 15px solid #0084ff; margin-top:50px; left:75px; position: absolute;}
+  
+body{
+font-family: amaranth;
+
+}
+.sendmsg{
+position:absolute;
+margin-top: -50px;
+width: 45px; 
+border-radius: 50%;
+right: 10px;
+
+}
+.sendmsg:hover{
+box-shadow: 0px 0px 10px black;
+}
+.sendmsg:focus{
+outline-width: 0px;
+
+opacity: 0.7;
+}
+#usrinput{
+width: 90%; 
+height: 50px;
+ width: 100%;
+ transition: all 500ms ease;
+ border: 2px solid silver;
+ border-radius: 10px;
+}
+#usrinput:focus{
+font-size: 20px;
+outline-width: 0px;
+border: 2px solid gray;
+font-family: amaranth;
+}
+
+
+ @-webkit-keyframes fadeup{
+    0% {
+        opacity:0;
+        transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px,0px)  ;
+    }
+}
+
+
+#rdiv{-webkit-animation: fadeup ease 800ms; 
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+     
+
+#childdiv{position: relative;  display: flex; float: right;max-width: 100%;  }
+
+#rdiv2{width: 0px; 
+height: 0px;
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent;
+border-left: 15px solid #44bec7;
+position: absolute;
+margin-top: 40px;
+right: 63px;
+}
+
+
+
+ #myList{transition: all 2s ease;}
+
+#rspan{ 
+display:inline-block;
+text-align:center;
+border: 0.5px solid silver;
+ margin: 5px; 
+ box-shadow: 0px 0px 5px black;
+ border-raduis:7px;
+ background-color: #44bec7;
+ min-width: 80px; max-width: 400px;
+ overflow-wrap:break-word;
+ border-radius: 5px;
+ transition: all 1s ease;
+ }
+
+
+#rp{margin: 10px; text-shadow:0px 0px 5px black; color: white; font-size: 14px; }
+
+#rimage{width: 60px;height: 60px; border-radius: 50%;
+
+bottom: -50px;
+box-shadow: 0px 0px 5px black;
+margin: 5px;
+
+transition: all 1s ease;
+}
+ @keyframes bounce {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-20px);
+        }
+    }
+
+@media only screen and (max-width: 750px) {
+    #robodiv2 {
+        visibility: hidden;}
+		
+    #rdiv2 {
+        /* visibility: hidden; */
+        right:52px;
+        margin-top:25px;
+    }
+	 #rimage{width: 40px;height: 40px; }
+ 
+#rspan{
+  max-width: 82%;
+
+ }
+}
+ @media only screen and (max-width: 400px) {
+     
+    #rdiv2 {
+        /* visibility: hidden; */
+        right:38px;
+        margin-top:20px;
+    }
+ #rspan{
+  max-width: 80%;
+
+ }
+ #rimage{width: 35px;height: 35px; }
+  
+ }
+ 
+ 
+ 
+
+ 

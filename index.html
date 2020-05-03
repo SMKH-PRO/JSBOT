@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/css.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <link rel="icon" href="media/icons/robot.png" type="image/png" sizes="16x16">
+
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+    <script src="js/fbInit.js"></script>
+    <!--Preloading images with this script -->
+    <Script>
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function () {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+                        // remove image from the array once it's loaded
+                        // for memory consumption reasons
+                        list.splice(index, 1);
+                    }
+                }
+                list.push(img);
+                img.src = array[i];
+            }
+        }
+
+        preloadImages([
+            "media/images/bgi1.jpg",
+            "media/images/bgi2.jpg",
+            "media/images/bgi3.jpg",
+            "media/images/bgi4.jpg",
+            "media/images/bgi5.jpg",
+            "media/images/bgi6.jpg",
+            "media/images/bgi7.jpg",
+            "media/images/bgi8.jpg",
+            "media/images/bgi9.jpg",
+            "media/gifs/bg1.gif",
+            "media/gifs/bg2.gif",
+            "media/gifs/bg3.gif",
+            "media/gifs/bg4.gif",
+            "media/gifs/bg5.gif",
+            "media/gifs/bg6.gif",
+            "media/gifs/bg7.gif",
+            "media/gifs/bg8.gif",
+            "media/gifs/bg9.gif",
+            "media/gifs/bg10.gif",
+            "media/gifs/bg11.gif",
+            "media/gifs/bg12.gif",
+            "media/gifs/bg13.gif",
+            "media/gifs/bg14.gif",
+        ]);
+
+
+
+
+        if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+    </Script>
+</head>
+
+<body style="background-color:#F8F8FF">
+    <fieldset style=" border-radius: 5px; background-color: #f5f5f5; min-height: 80vh" id="myList">
+
+        <div id="rdiv">
+            <div id="childdiv"><span id="rspan">
+                    <p class="mainp" style="font-size: 20px;" id="rp">Hi, Would you <a target="_blank"
+                            href="https://www.facebook.com/139766653314757"><img
+                                style="animation: bounce 1s infinite alternate; margin: 3px; box-shadow: 0px 0px 3px black; border-radius:50%;margin-bottom: -15px;"
+                                width="25px" src="./media/icons/like.png"></a> Me On <a target="_blank"
+                            style="text-decoration: none;color:white;"
+                            href="https://www.facebook.com/139766653314757">Facebook</a>?<br><br>
+                        <p style="font-size: 17px">Special Features:-</p>
+                        <ol style="font-size:14px;">
+                            <li>CHANGE BG COLOR</li>
+                            <li>CHANGE BG GIF.</li>
+                            <li>CHANGE BG IMG. </li>
+                            <li>WHAT IS MY NAME.</li>
+                            <li>DELETE MY NAME.</li>
+                            <li>Press arrow up key to get previous message back in input.</li>
+                            <li>Add Custom Question/Answer and they will be available to everyone.</li>
+
+                        </ol>
+                    </p>
+                </span><img src="./media/icons/robot.png" alt="RobotPic" id="rimage">
+                <div id="rdiv2"></div>
+            </div>
+        </div>
+
+    </fieldset>
+
+
+    <br>
+    <div style=" height: 100px;display: inline">
+    <input type="text" onkeydown="if (event.keyCode == 13){  usermessage()}else if(event.keyCode==38 &&localStorage.getItem('lastInput')) this.value=localStorage.getItem('lastInput');" maxlength="100" id="usrinput">
+
+        <input type="image" class="sendmsg" src="./media/icons/sendmsg.png" onclick="usermessage()">
+    </div>
+    <br>
+
+
+
+
+
+
+
+
+    <!-- Modal -->
+    <div id="modal-container">
+        <div class="modal-background">
+            <button class="closeBTN">❌</button>
+
+            <div id="mymodalbox" class="modal">
+                <img src="./media/icons/heart.png" class="HeartIMG" title="made with love by kashan haider" style="width: 165px;">
+                <h2 class="fadeBeforeModalOpen">Add Answer</h2>
+                <p class='fadeBeforeModalOpen'>Please increase my knowledge.</p>
+                <div class="fadeBeforeModalOpen" style="text-align: left;">
+                    <p style="font-size: 14px;line-height: 1;">You can add multiple questions or answers by separating them with
+                        semi-colon
+                        <br>
+                        <b style="color:cornflowerblue">For Example:</b>
+                        <br/>
+                        <span style="color:darkred">
+                            <b title="index 0 of array" style="color:green">Question One</b>;
+                            <b title="index 1 of array" style="color:green">Question Two</b>;
+                            <b title="index 2 of array" style="color:green">Question 3</b>;
+                            <br><br>
+                            Note: All questions must be same but asked in different ways
+
+                        </span>
+
+                    </p>
+                    <form action="javascript:void(0)" onsubmit="submitQuestion(event)">
+                        <label>Question(s):</label>
+                        <input id="Question" type="text" onblur="ChangeOfQuest(this.value,'#capQuest' )"  class="QuestionInput" />
+                        <span class="CaptionsofQuests"  id="capQuest"></span>
+                        
+                        <label>Answer(s):</label>
+                        <input id="Answer"  onblur="ChangeOfQuest(this.value,'#capAns')" type="text" class="AnswerInput" />
+                        <span class="CaptionsofQuests" id="capAns"></span>
+
+                        <p id="QError" style="display: none;"> </p>
+                        <button class="QuestionSubmit">SUBMIT </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
+
+
+
+
+    <script>
+        var my_List = document.getElementById("myList")
+    </script>
+    <script src="js/Data_Initialize.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/modal.js"></script>
+
+</body>
+
+</html>

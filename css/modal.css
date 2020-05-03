@@ -1,0 +1,297 @@
+
+  
+  html, body {
+
+    background-position: top center;
+
+  }
+  html.modal-active, body.modal-active {
+    overflow: hidden;
+  }
+.closeBTN{
+  background-color: wheat;
+  border: 1px solid black;
+  width: 50px;
+  position: fixed !important;
+  top: 30px !important;
+  right: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  animation: btnFadeIn .5s 1.4s linear forwards;
+  opacity: 0;
+
+}
+  .CaptionsofQuests{display:none;line-height: 1;color:darkseagreen;font-size: 13px;}
+  #QError{
+    text-shadow: 0px 0px 1px grey;
+    font-weight: bold;
+    margin:0px !important
+  }
+ .QuestionSubmit{
+    border-radius: 5px;
+    float: right;
+    margin: 5px;
+    /* margin-top: 20px; */
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 8px 20px;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+    background: skyblue;
+ }
+  .QuestionInput:focus,.AnswerInput:focus{
+      border:2px solid green;
+  }
+  .QuestionInput,.AnswerInput{
+    width: 100%;
+    font-size: 13px;
+    border-radius: 10px;
+    border: 1.5px solid deepskyblue;
+    margin: 5px;
+    height: 22px;
+    padding:5px;
+    outline-width: 0;
+
+
+  }
+
+  .HeartIMG{
+    animation:Hide 2500ms ease-out forwards;
+  }
+  
+  #modal-container {
+    position: fixed;
+    display: table;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 1;
+  }
+
+  #modal-container.seven {
+    transform: scale(1);
+  }
+  #modal-container.seven .modal-background {
+    background: rgba(0, 0, 0, 0);
+    animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.seven .modal-background .modal {
+    height: 75px;
+    width: 75px;
+    padding: 20px;
+    padding-top:0px;
+    padding-right: 35px;
+    border-radius: 75px;
+    overflow: hidden;
+    animation: circleSeBlowKrna 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.seven .modal-background .modal h2,.fadeBeforeModalOpen {
+    opacity: 0;
+    position: relative;
+    animation: modalContentFadeIn .5s 1.4s linear forwards;
+  }
+  #modal-container.seven.out {
+    animation: slowFade .5s 1.5s linear forwards;
+  }
+  #modal-container.seven.out .modal-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeToRed 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.seven.out .modal-background .modal {
+    border-radius: 3px;
+    height: 162px;
+    width: 227px;
+    animation: killShot 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container.seven.out .modal-background .modal h2, #modal-container.seven.out .modal-background .modal p {
+    animation: modalContentFadeOut 0.5s 0.5 cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  #modal-container .modal-background {
+    display: table-cell;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    vertical-align: middle;
+  }
+  #modal-container .modal-background .modal {
+    background: white;
+    padding: 50px;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 300;
+    position: relative;
+  }
+  #modal-container .modal-background .modal h2 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+  #modal-container .modal-background .modal p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+
+@keyframes Hide {
+  0% {
+    opacity: 1;
+        display: block;
+        width: 100px;
+        height: auto;
+        position: inherit;
+        top:auto;
+  }
+  25%{
+    width: 120px;
+
+  }
+  50% {
+    opacity: .6;
+    width: 200px;
+
+  }
+  80% {
+    opacity: .3;
+    width:300px;
+
+  }
+  90% {
+    opacity: .1;
+    width: 500px;
+
+  }
+  100% {
+    opacity: 0;
+
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:0;
+  }
+}
+  @keyframes fadeIn {
+    0% {
+      background: rgba(0, 0, 0, 0);
+    }
+    100% {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    100% {
+      background: rgba(0, 0, 0, 0);
+    }
+  }
+  
+  @keyframes modalFadeIn {
+    0% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: white;
+    }
+  }
+  @keyframes modalFadeOut {
+    0% {
+      background-color: white;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+  @keyframes modalContentFadeIn {
+    0% {
+      opacity: 0;
+      top: -30px;
+    }
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  @keyframes btnFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes modalContentFadeOut {
+    0% {
+      opacity: 1;
+      top: 0px;
+    }
+    100% {
+      opacity: 0;
+      top: -20px;
+    }
+  }
+  @keyframes circleSeBlowKrna {
+    0% {
+      transform: translateX(1000px);
+      background-color: #44bec7;
+    }
+    80% {
+      transform: translateX(0px);
+      background-color: #44bec7;
+      border-radius: 100%;
+      height: 150px;
+      width: 150px;
+    }
+    90% {
+        background-color: #A2DFE3;
+
+      border-radius: 50%;
+      height: 25vw;
+      width: 25vw;
+    }
+    100% {
+        background-color: white;
+        border-radius: 3px;
+        height: 56vh;
+        width: 60vw;
+      
+    }
+  }
+
+
+
+  @media screen and (max-width:701px) {
+
+
+    @keyframes circleSeBlowKrna {
+      0% {
+        transform: translateX(1000px);
+        background-color: #44bec7;
+      }
+      80% {
+        transform: translateX(0px);
+        background-color: #44bec7;
+        border-radius: 100%;
+        height: 150px;
+        width: 150px;
+      }
+      90% {
+          background-color: #A2DFE3;
+  
+        border-radius: 50%;
+        height: 25vw;
+        width: 25vw;
+      }
+      100% {
+          background-color: white;
+          border-radius: 3px;
+          height: 75vh;
+          width: 80vw;
+      }
+    }
+  
+
+  }

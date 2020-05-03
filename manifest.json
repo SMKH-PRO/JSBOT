@@ -1,0 +1,18 @@
+{
+    "short_name": "JSBOT",
+    "name": "JavascriptBot",
+    "icons": [
+      
+      {
+        "src": "media/icons/robot.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "index.html",
+    "background_color": "#1DA1F2",
+    "display": "standalone",
+    "gcm_sender_id": "103953800507",
+    "theme_color": "#3367D6"
+
+  }
