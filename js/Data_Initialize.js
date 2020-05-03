@@ -104,7 +104,7 @@ var Q_DATA= [
 
 
     {
-        Questions: ["xD", ":P", ":D", ":V", ":O", "WOW", "GOOD", "NICE","Okay"],
+        Questions: ["xD", ":P", ":D", ":V", ":O", "WOW", "GOOD", "NICE","Okay","OK"],
         Answers: ["You laugh so hard , Nice keep it up", "Nice to see you laugh .", "Your Laugh is good", "Look , i made you laugh .", "I feel happy to know that i am the reason to laugh, keep laughing and be happy..!"],
         action: (elements) => {
             const { rp } = elements ? elements : {}
@@ -163,7 +163,14 @@ var Q_DATA= [
 
     },
 
-
+    //Delete name
+    {
+        Questions: ["DELETE MY NAME", "Thats not my name", "that's not my name", "its not my name","that's not me","thats not me" ],
+        Answers:  ["Okay, I've deleted my memory that contain names."],
+        action:()=>{
+            localStorage.removeItem("name")
+        }
+    },
 //END CONVERSATION BYE BYE
 {
     Questions: ["Bye", "khuda hafiz", "allah hafiz", "see you","shut up" ],

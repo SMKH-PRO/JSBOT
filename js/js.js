@@ -103,7 +103,7 @@ QDATA=[...Q_DATA,...OnlineData]
 
 	//Name function start!
 
-	if (RegExp("WHAT IS MY NAME", "gi").test(usrinput) || RegExp("TELL ME MY NAME", "gi").test(usrinput)) {//ADD ROBOTS MESSAGE BUBLE
+	if (RegExp("WHAT IS MY NAME", "gi").test(usrinput) || RegExp("TELL ME MY NAME", "gi").test(usrinput)|| RegExp("WHAT's MY NAME", "gi").test(usrinput)|| RegExp("WHATS MY NAME", "gi").test(usrinput)) {//ADD ROBOTS MESSAGE BUBLE
 
 
 		if (localStorage.getItem("name") == null) {
