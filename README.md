@@ -20,7 +20,7 @@ SOME COMMANDS:-
 
 HOW TO ADD MORE QUESTIONS?
 1. You can add local questions in Data_initialize.js file.
-2. Or you can just write any random reply then it will show you an option for UI based form for adding questions.
+2. Or you can just send any random message to the chat and it will show you an option for UI based form for adding questions.
 Questions added through UI form will be stored gloablly means they will be stored on firebase database that way when you add a new question, 
 enyone from anywhere visits the site and ask the question that you added will get the answer you wrote!. 
 
